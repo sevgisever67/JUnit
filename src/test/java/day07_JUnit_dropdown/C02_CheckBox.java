@@ -50,5 +50,7 @@ public class C02_CheckBox {
         Thread.sleep(3000);
         //  e. Checkbox1 ve Checkbox2’nin seçili olduğunu test edin
         Assert.assertTrue(checkBox1.isSelected() && checkBox2.isSelected());
+        System.out.println("checkBox1.getTagName() = " + checkBox1.getTagName());
+
     }
 }
