@@ -37,12 +37,11 @@ public class C02_SwitchingWindows extends TestBase {
         Set<String> whDegerleriSet = driver.getWindowHandles();
         String ikinciWindowWHD= "";
         for (String eachWhd: whDegerleriSet
-        ) {
+             ) {
             if (!eachWhd.equals(ilkSayfaWHD)){
                 ikinciWindowWHD = eachWhd;
             }
         }
-        System.out.println("whDegerleriSet.getClass(2) = " + whDegerleriSet.getClass(2));
         // Artik acilan 2.window'un windowHandleDegerine sahibiz
         //● Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
         driver.switchTo().window(ikinciWindowWHD);
