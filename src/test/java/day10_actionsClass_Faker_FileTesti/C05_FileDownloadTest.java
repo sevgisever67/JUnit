@@ -12,12 +12,12 @@ public class C05_FileDownloadTest extends TestBase {
         //2. https://the-internet.herokuapp.com/download adresine gidelim.
         driver.get("https://the-internet.herokuapp.com/download");
         //3. foto.png dosyasını indirelim
-        WebElement fotoElementi = driver.findElement(By.xpath("//a[text()='sample.png']"));
+        WebElement fotoElementi = driver.findElement(By.linkText("image.png"));
         fotoElementi.click();
         Thread.sleep(3000);
         //4. Dosyanın başarıyla indirilip indirilmediğini test edelim
         // Dosyayi Downloads klasorune indirecek
-        String dosyaYolu = "C:\\Users\\tr\\sample.png";
+        String dosyaYolu = "C:\\Users\\tr\\image.png";
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
         // herkesin bilgisayarinda farkli bir dosya hiyerarsisi oldugundan
         // herkesin dosya yolu birbirinden farkli olur

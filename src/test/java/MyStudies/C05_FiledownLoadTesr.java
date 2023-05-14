@@ -15,11 +15,11 @@ public class C05_FiledownLoadTesr extends TestBase {
         //2. https://the-internet.herokuapp.com/download adresine gidelim.
         driver.get("https://the-internet.herokuapp.com/download");
         //3. logo.png dosyasını indirelim
-        WebElement fotoElementi= driver.findElement(By.linkText("foto.png"));
+        WebElement fotoElementi= driver.findElement(By.linkText("image.png"));
         fotoElementi.click();
         Thread.sleep(2000);
         //4. Dosyanın başarıyla indirilip indirilmediğini test edelim
-        String dosyaYolu="C:\\Users\\tr\\Downloads\\foto.png";
+        String dosyaYolu="C:\\Users\\tr\\Downloads\\image.png";
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 
 
