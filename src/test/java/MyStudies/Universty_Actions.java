@@ -8,7 +8,7 @@ import utilities.TestBase;
 
 public class Universty_Actions extends TestBase {
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
         //Yeni Class olusturun ActionsClassHomeWork
         //1- "http://webdriveruniversity.com/Actions" sayfasina gidin
         driver.get("http://webdriveruniversity.com/Actions");
@@ -27,6 +27,7 @@ public class Universty_Actions extends TestBase {
         //6- “Click and hold" kutusuna basili tutun
         driver.findElement(By.xpath("//p[text()='Click and Hold!']")).click();
         //7-“Click and hold" kutusunda cikan yaziyi yazdirin
+        Thread.sleep(2000);
         String clickHoldText=driver.findElement(By.xpath("//div[@style='background: tomato; font-size: 30px;']")).getText();
         System.out.println(clickHoldText);
 

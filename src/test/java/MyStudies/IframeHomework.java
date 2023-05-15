@@ -1,5 +1,6 @@
 package MyStudies;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,11 +19,17 @@ public class IframeHomework extends TestBase {
         //3. “Cameras product”i tiklayin
         driver.findElement(By.xpath("//p[text()='Cameras']")).click();
         //4. Popup mesajini yazdirin
-        System.out.println(driver.findElement(By.xpath("//div[@class='modal-body']")).getText());
+        String popUp=driver.findElement(By.xpath("//div[@class='modal-body']")).getText();
+        System.out.println("pop up text : "+popUp);
 
         //5. “close” butonuna basin
         driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
         //6. "WebdriverUniversity.com (IFrame)" linkini tiklayin
+        driver.switchTo().defaultContent();
+        driver.findElement(By.xpath("//div[@class='navbar-header'][1]")).click();
         //7. "http://webdriveruniversity.com/index.html" adresine gittigini test edin
+        String expectedURL="http://webdriveruniversity.com/index.html";
+        String actualURL=driver.getCurrentUrl();
+        Assert.assertEquals(expectedURL,actualURL);
     }
 }
