@@ -16,7 +16,7 @@ public class C03_ReadExcel {
         Workbook workbook = WorkbookFactory.create(fis);
         Sheet sheet = workbook.getSheet("Sayfa1");
         Row row = sheet.getRow(1); // index 0'dan basliyor
-        Cell cell = row.getCell(3); // index 0'dan basliyor
+        Cell cell = row.getCell(2); // index 0'dan basliyor
         System.out.println(cell);
         // 5.index'deki satirin, 1.index'indeki datanin "Luanda" oldugunu test edin
         row= sheet.getRow(5);
