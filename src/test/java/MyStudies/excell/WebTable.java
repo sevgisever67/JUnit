@@ -28,7 +28,7 @@ public class WebTable extends TestBase {
         Assert.assertEquals(expectedSatirsayisi,actualSatirSayisi);
 
         //5.Tum satirlari yazdirin
-        System.out.println("===================");
+        System.out.println("=======================");
         for (WebElement eachSatir:satirElementList) {
             System.out.println(eachSatir.getText());
 
